@@ -16,3 +16,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+# set the hostname for the machine
+include_recipe 'hostname'
+# Update package cache and install requested packages
+include_recipe 'system_base'
+# Merge secrets in encrypted databags into node attributes
+include_recipe 'system_base::secrets'
+# Configures system locale
+include_recipe 'system_base::locale'
+# Add personal rc files with some aliases and
+include_recipe 'system_base::rc_files'
+# Install and configure git
+include_recipe 'git'
+# Configure ntp daemon on every server
+include_recipe 'ntp'
+# Configure timezone on the given server
+include_recipe 'timezone-ii'
