@@ -33,3 +33,5 @@ include_recipe 'git'
 include_recipe 'ntp'
 # Configure timezone on the given server
 include_recipe 'timezone-ii'
+# Configure name resolution on server
+include_recipe 'base_role::resolver'

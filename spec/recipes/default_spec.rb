@@ -19,5 +19,6 @@ describe 'base_role::default' do
   it { should include_recipe 'ntp' }
   it { should include_recipe 'git' }
   it { should include_recipe 'timezone-ii' }
+  it { should include_recipe 'base_role::resolver' }
 
 end

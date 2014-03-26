@@ -45,8 +45,4 @@ describe 'Default recipe' do
     it { should return_stdout 'CET' }
   end
 
-  describe 'Name resolution configuration' do
-
-  end
-
 end
