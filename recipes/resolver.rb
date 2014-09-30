@@ -17,6 +17,19 @@
 # limitations under the License.
 #
 
+=begin
+#<
+Statically configures name server resolution on Ubuntu system.
+
+It removes the `'/etc/resolv.conf'` symlink to disable resolvconf daemon and
+replaces it with static file configured using [resolver](https://supermarket.getchef.com/cookbooks/resolver) cookbook.
+
+If `node[:resolver][:nameservers]` is empty (default value in resolver cookbook) sets it to
+`%w(8.8.8.8 8.8.4.4)` which are public dns servers hosted by Google.
+#>
+=end
+
+
 # Configure resolver with static configuration
 ruby_block 'disable ubuntu resolvconf' do
   block do

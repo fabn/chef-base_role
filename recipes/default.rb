@@ -17,6 +17,23 @@
 # limitations under the License.
 #
 
+=begin
+#<
+This recipe includes basic recipes to run on every machine.
+
+It configures system [hostname](https://supermarket.getchef.com/cookbooks/hostname), then applies
+other system configurations using [system_base](https://github.com/fabn/system_base_cookbook).
+
+It also includes [git](https://supermarket.getchef.com/cookbooks/git),
+[ntp](https://supermarket.getchef.com/cookbooks/ntp) and
+(timezone)[https://supermarket.getchef.com/cookbooks/timezone-ii] cookbooks.
+
+Finally it configures system hostname resolution with [resolver](#base_roleresolver) recipe.
+
+It should be the very first recipe included in every server.
+#>
+=end
+
 # set the hostname for the machine
 include_recipe 'hostname'
 # Update package cache and install requested packages
