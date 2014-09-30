@@ -1,6 +1,4 @@
-require 'spec_helper'
-
-describe 'base_role::default' do
+RSpec.describe 'base_role::default' do
 
   subject do
     ChefSpec::Runner.new.converge(described_recipe)
