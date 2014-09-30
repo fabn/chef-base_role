@@ -26,7 +26,7 @@ other system configurations using [system_base](https://github.com/fabn/system_b
 
 It also includes [git](https://supermarket.getchef.com/cookbooks/git),
 [ntp](https://supermarket.getchef.com/cookbooks/ntp) and
-(timezone)[https://supermarket.getchef.com/cookbooks/timezone-ii] cookbooks.
+[timezone](https://supermarket.getchef.com/cookbooks/timezone-ii) cookbooks.
 
 Finally it configures system hostname resolution with [resolver](#base_roleresolver) recipe.
 
