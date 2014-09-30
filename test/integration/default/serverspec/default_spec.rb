@@ -42,7 +42,7 @@ describe 'Default recipe' do
 
   # Timezone configuration
   describe command('date +%Z') do
-    it { should return_stdout 'CET' }
+    it { should return_stdout /CES?T/ }
   end
 
 end
